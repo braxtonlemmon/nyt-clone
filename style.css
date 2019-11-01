@@ -1,0 +1,271 @@
+html {
+	box-sizing: border-box;
+	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-size: 16px;
+	font-weight: 400;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	margin-bottom: 50px;
+
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin: 0 0 5px 0;
+}
+
+/*
+	========================
+	HEADER
+	========================
+*/
+header {
+	display: flex;
+	background: white;
+	font-size: 16px;
+	width: 100%;
+	position: fixed;
+	border-bottom: 1px solid #e2e2e2;
+	box-shadow: rgba(0,0,0,0.08) 0 0 5px 1px;
+	justify-content: space-between;
+	padding: 5px 100px;
+}
+
+.logo {
+	height: 29px;
+	align-self: center;
+	cursor: pointer;
+}
+
+.header-center {
+	align-self: center;
+}
+
+.subject {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.subject:hover {
+	text-decoration: underline;
+}
+
+.header-links {
+	cursor: pointer;
+}
+
+/* 
+	=====================
+	MAIN CONTAINER
+	=====================
+*/
+
+
+article {
+	display: grid;
+	padding-top: 60px;
+	grid-template-columns: repeat(6, 1fr);
+}
+
+/* 
+	======================
+	FIGURES / IMAGES
+	======================
+*/
+figure {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.figure1 {
+	grid-column: 2 / -2;
+}
+
+.figure2 {
+	grid-column: 2 / -2;
+}
+
+.figure4 {
+	grid-column: 3 / -3;
+}
+
+.fig-img {
+	width: 100%;
+	margin: 0;
+}
+.fig-caption {
+	color: #666;
+	font-size: 16px;
+	padding-right: 30px;
+}
+
+.fig-author,
+.end-paragraph {
+	display: block;
+	color: #888;
+	font-size: 14px;
+}
+
+/* 
+	=====================
+	Immedaite pre-article info
+	=====================
+*/
+
+.title {
+	grid-column: 3 / span 2;
+	font-style: italic;
+	width: 80%;
+	font-size: 2.5rem;
+	align-self: center;
+}
+
+.article-info {
+	display: flex;
+	flex-direction: column;
+	grid-column: 3 / -3;
+}
+
+.article-info > * {
+	margin: 0;
+	padding: 5px 0;
+}
+
+.author {
+	font-weight: bold;
+	font-size: 16px;
+}
+
+.author span {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.author span:hover {
+	text-decoration: none;
+}
+.date-links {
+	display: flex;
+	color: #333;
+	font-size: 14px;
+	justify-content: space-between;
+	padding: 0;
+}
+
+.date-links img {
+	height: 30px;
+}
+.date-links li {
+	text-decoration: none;
+	list-style: none;
+	align-self: center;
+}
+
+/* 
+	=================
+	article paragraphs
+	=================
+*/
+.paragraph {
+	grid-column: 3 / -3;
+	font-size: 1.5rem;
+	padding: 0 10px;
+}
+
+.paragraph-title {
+	font-weight: bold;
+}
+
+.end-paragraph {
+	font-size: 12px;
+}
+/*
+	================
+	article video
+	================
+*/
+
+/*
+	=================
+	misc. promotion
+	=================
+*/
+
+/* sign up side box */
+.sign-up-wrapper {
+	grid-column: 5 / span 1;
+	grid-row: 5 / span 1;
+	display: grid;
+}
+
+.sign-up-box {
+	place-self: end center;
+	display: flex;
+	flex-direction: column;
+	width: 60%;
+	height: 70%;
+}
+
+.sign-up-box > * {
+	margin: 5px;
+}
+.sign-up {
+	font-weight: bold;
+}
+.sign-up-info {
+	color: rgb(102, 102, 102);
+	font-size: 0.9rem;
+}
+.sign-up-btn {
+	background-color: rgb(86, 123, 149);
+	border: 1px solid rgb(86, 123, 149);
+	height: 40px;
+	border-radius: 5px;
+	color: white;
+	font-weight: bolder;
+}
+
+/* editor's picks side box */
+.editor-picks-wrapper {
+	grid-column: 5 / span 1;
+	display: grid;
+	justify-items: center;
+}
+
+.editor-picks-box {
+	width: 70%;
+	place-self: center / center;
+}
+.pick {
+	display: flex;
+	height: 80px;
+	padding-bottom: 10px;
+
+}
+.pick img {
+	width: 75px;
+	padding-right: 10px;
+	cursor: pointer;
+}
+
+.pick span {
+	cursor: pointer;
+}
+
+.pick span:hover {
+	text-decoration: underline;
+}
