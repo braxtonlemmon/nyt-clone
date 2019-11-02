@@ -14,8 +14,6 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-	margin-bottom: 50px;
-
 }
 
 h1,
@@ -193,11 +191,120 @@ figure {
 .end-paragraph {
 	font-size: 12px;
 }
+
+/* bottom of article */
+.article-bottom-box {
+	grid-column: 3 / span 2;
+	display: flex;
+	justify-content: space-between;
+	padding: 10px;
+}
+
+.article-bottom-box img {
+	cursor: pointer;
+}
+.read-comments {
+	background-color: rgb(86, 123, 149);
+	border: 1px solid rgb(50, 104, 145);
+	border-radius: 3px;
+	color: white;
+	font-weight: bold;
+	width: 50%;
+	padding: 0 20px;
+	cursor: pointer;
+}
+
+/* 
+	=======================
+	FIGURE 2 - Inflation Theory
+	=======================
+*/
+.figure2 {
+
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: 100px repeat(4, 1fr);
+}
+
+.inflation-img {
+	grid-row: 2 / 6;
+	grid-column: 1 /5 ;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+.inflation-top {
+	display: flex;
+	flex-direction: column;
+	grid-row: 1 / span 1;
+	grid-column: 1 / -1;
+}
+
+.inflation-top p {
+	font-size: 14px;
+	color: grey;
+	margin-top: 0;
+}
+.top-text1,
+.bottom-text1 {
+	grid-column: 1 / span 1;
+}
+
+.top-text2,
+.bottom-text2 {
+	grid-column: 2 / span 1;
+}
+
+.top-text3,
+.bottom-text3 {
+	grid-column: 3 / span 1;
+}
+
+.top-text4,
+.bottom-text4 {
+	grid-column: 4 / span 1;
+}
+
+.top-text1,
+.top-text2, 
+.top-text3,
+.top-text4 {
+	grid-row: 3 / span 1;
+}
+
+.bottom-text1,
+.bottom-text2,
+.bottom-text3,
+.bottom-text4 {
+	grid-row: 5 / span 1;
+}
+
+.figure2 .fig-author {
+	grid-row: -1;
+}
+
 /*
 	================
 	article video
 	================
 */
+.figure3 {
+	grid-column: 3 / 5;
+}
+.video-player {
+	position: relative;
+	padding-top: 56%;
+}
+
+.video-player iframe {
+	position: absolute;
+	top: 0; 
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
 
 /*
 	=================
@@ -237,13 +344,17 @@ figure {
 	border-radius: 5px;
 	color: white;
 	font-weight: bolder;
+	cursor: pointer;
 }
 
 /* editor's picks side box */
 .editor-picks-wrapper {
 	grid-column: 5 / span 1;
+	grid-row: 9 / span 2;
 	display: grid;
 	justify-items: center;
+	margin-bottom: 0;
+	padding-bottom: 0;
 }
 
 .editor-picks-box {
@@ -268,4 +379,193 @@ figure {
 
 .pick span:hover {
 	text-decoration: underline;
+}
+
+/* 
+	==========================
+	Bottom Content
+	==========================
+*/
+
+.bottom-content {
+	margin-top: 20px;
+	display: grid;
+	gap: 20px;
+	background: white;
+	grid-template-columns: repeat(6, 1fr);
+	grid-template-areas:
+		"... more    more    more    popular ..."
+		"... picks   picks   picks   popular ..."
+		"... footer  footer  footer  footer  ..."
+}
+
+.bottom-title {
+	font-weight: 700;
+	font-size: 16px;
+	padding: 20px 0;
+}
+
+/* more articles section */
+.more-articles {
+	border-top: 1px solid black;
+	grid-area: more;
+	background: white;
+	display: grid;
+	gap: 10px;
+	align-content: start;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.more-articles .bottom-title  {
+	grid-column: 1 / -1;
+	padding: 20px 0;
+}
+
+.more-fig {
+	background: white;
+	display: flex;
+	flex-direction: column;
+}
+
+.more-fig img {
+	width: 100%;
+	cursor: pointer;
+}
+
+.more-credit {
+	font-size: 10px;
+	color: rgb(153, 153, 153);
+	align-self: flex-end;
+	text-align: right;
+	cursor: pointer;
+}
+
+.more-caption {
+	font-size: 18px;
+	color: rgb(18, 18, 18);
+	cursor: pointer;
+}
+
+.more-date {
+	font-size: 12px;
+	color: rgb(153, 153, 153);
+}
+
+
+/* popular section */
+.popular {
+	border-top: 1px solid black;
+	grid-area: popular;
+	background: white;
+	display: flex;
+	flex-direction: column;
+}
+
+.popular-title {
+	border-top: 1px solid rgb(182, 182, 182);
+	padding: 15px 0;
+	cursor: pointer;
+	font-size: 19px;
+	font-weight: 500;
+	line-height: 23px;
+}
+
+/* Editors' picks bottom section */
+.btm-picks {
+	grid-area: picks;
+	background: white;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	align-content: start;
+	border-top: 1px solid grey;
+	gap: 10px;
+}
+
+.btm-picks .bottom-title {
+	grid-column: 1 / -1;
+}
+
+/*
+	=================
+	Mega footer
+	=================
+*/
+
+.footer {
+	grid-area: footer;
+	height: 100px;
+	border-top: 5px double lightgrey;
+	display: grid;
+	gap: 10px;
+	grid-template-columns: repeat(6, 1fr);
+}
+
+/* top footer section */
+.top-footer {
+	grid-area: 1 / 1 / span 1 / -1;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.top-footer > * {
+	cursor: pointer
+}
+
+/* mid footer large section */
+.mid-footer {
+	grid-area: 2 / 1 / span 1 / -1;
+	background: #fff;
+	display: grid;
+	padding: 5px 0;
+	gap: 10px;
+	grid-template-columns: repeat(6, 1fr);	
+	border-bottom: 1px solid lightgrey;
+}
+.mid-footer h3 {
+	font-size: 14px;
+	font-weight: 700;
+
+}
+.mid-footer ul {
+	padding: 0;
+}
+.mid-footer li {
+	list-style: none;
+	font-size: 14px;
+	line-height: 16px;
+	height: 23px;
+	cursor: pointer;
+}
+
+.mid-footer li:hover {
+	text-decoration: underline;
+}
+.extra-list2 {
+	border-bottom: 1px solid lightgrey;
+}
+.foot-extra {
+	border-left: 1px solid lightgrey;
+	padding-left: 10px;
+}
+
+/* bottom footer section */
+.bottom-footer {
+	grid-area: 3 / 1 / span 1 / -1;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	padding-bottom: 10px;
+}
+
+.bottom-footer ul {
+	padding: 0;
+	margin: 0;
+}
+.bottom-footer li {
+	display: inline;
+	font-size: 10px;
+	color: grey;
+	padding: 0 10px;
+	cursor: pointer;
 }
